@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.upper
+		{
+			text-transform: uppercase;
+		}
+
+		.blueBackground
+		{
+			background: #00f;
+		}
+
+		.blueBorder
+		{
+			border: #00f 3px solid;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="my-class">div 1</div>
+	<div class="my-class">div 2</div>
+	<div class="my-class">div 3</div>
+	
+	<script>
+		divs = document.querySelectorAll("div.my-class")
+
+		for (index in divs)
+		{
+			if (index == 0)
+			{
+				className = "upper"
+			}
+
+			else if (index == 1)
+			{
+				className = "blueBackground"
+			}
+
+			else if (index == 2)
+			{
+				className = "blueBorder"
+			}
+
+			divs[index].classList.add(className)
+		}
+	</script>
+
+</body>
+</html>
